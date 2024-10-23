@@ -1,9 +1,12 @@
+import 'package:bullionnxtnew/bloc/main_screen/mainscreen_bloc.dart';
 import 'package:bullionnxtnew/helpers/app_colors.dart';
 import 'package:bullionnxtnew/presentation/market_gold_rate_setup/future_tab.dart';
 import 'package:bullionnxtnew/presentation/market_gold_rate_setup/manual_tab.dart';
 import 'package:bullionnxtnew/presentation/market_gold_rate_setup/metals_tab.dart';
 import 'package:bullionnxtnew/presentation/market_gold_rate_setup/spot_tab.dart';
+import 'package:bullionnxtnew/storage/app_preferences.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MarketGoldRateConfig extends StatelessWidget {
   const MarketGoldRateConfig({super.key});
@@ -15,6 +18,24 @@ class MarketGoldRateConfig extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: AppColors.darkSlateGrey,
+          actions: [
+            GestureDetector(
+              onTap: () {
+                SecureStorageHelper.shared.removeToken();
+                // context.read<AccountBloc>().add(ClearDataEvent());
+                context
+                  .read<MainScreenBloc>()
+                  .add(SetBottomBarIndexEvent(index: 0));
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Icon(
+                  Icons.logout,
+                  color: AppColors.white,
+                ),
+              ),
+            )
+          ],
           bottom: TabBar(
             labelColor: AppColors.white,
             labelStyle: Theme.of(context).textTheme.titleSmall!.copyWith(

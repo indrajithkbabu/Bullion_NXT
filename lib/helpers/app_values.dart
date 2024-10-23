@@ -80,6 +80,24 @@ class AppValues {
 
    /// container height 35
   static const double containerTileHeight = 35;
+
+    /// duration 200 milliseconds
+  static const int veryLowDuration = 200;
+
+  /// duration 500 milliseconds
+  static const int lowDuration = 500;
+
+  /// duration 1000 milliseconds
+  static const int defaultDuration = 1000;
+
+  /// duration 2000 milliseconds
+  static const int highDuration = 2000;
+
+  /// duration 5000 milliseconds
+  static const int veryHighDuration = 5000;
+
+    /// snackbar height 50
+  static const double snackbarHeight = 50;
 //   /// icon height 24
 //   static const double iconHeight = 24;
 
@@ -242,8 +260,8 @@ class AppValues {
 //   /// logo height 45
 //   static const double logoHeight = 45;
 
-//   /// snackbar height 50
-//   static const double snackbarHeight = 50;
+  // /// snackbar height 50
+  // static const double snackbarHeight = 50;
 
 //   /// image height 275
 //   static const double imageHeightDetailed = 275;
@@ -284,20 +302,20 @@ class AppValues {
 //   /// leading width app bar 70
 //   static const double leadingWidth = 70;
 
-//   /// duration 200 milliseconds
-//   static const int veryLowDuration = 200;
+  // /// duration 200 milliseconds
+  // static const int veryLowDuration = 200;
 
-//   /// duration 500 milliseconds
-//   static const int lowDuration = 500;
+  // /// duration 500 milliseconds
+  // static const int lowDuration = 500;
 
-//   /// duration 1000 milliseconds
-//   static const int defaultDuration = 1000;
+  // /// duration 1000 milliseconds
+  // static const int defaultDuration = 1000;
 
-//   /// duration 2000 milliseconds
-//   static const int highDuration = 2000;
+  // /// duration 2000 milliseconds
+  // static const int highDuration = 2000;
 
-//   /// duration 5000 milliseconds
-//   static const int veryHighDuration = 5000;
+  // /// duration 5000 milliseconds
+  // static const int veryHighDuration = 5000;
 
 //   /// angle for rotating icon
 //   static const double rotationAngleBottom = 3.14 / 12 * 18;

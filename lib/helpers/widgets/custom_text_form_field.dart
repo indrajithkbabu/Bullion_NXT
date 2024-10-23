@@ -14,9 +14,12 @@ class CustomTextFormField extends StatelessWidget {
   final InputBorder? enabledBorder;
   final InputBorder? focusedBorder;
   final Color? fillColor;
+  final String? Function(String?)? validator;
+  final TextEditingController? controller;
   const CustomTextFormField({
     super.key,
     required this.hintText,
+     this.validator,
     this.prefixIcon,
     this.obscureText = false,
     this.keyboardType,
@@ -26,12 +29,15 @@ class CustomTextFormField extends StatelessWidget {
     this.enabledBorder,
     this.focusedBorder,
     this.fillColor,
+    this.controller,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller:controller ,
       onChanged: onChanged,
+      validator:validator,
       keyboardType: keyboardType,
       obscureText: obscureText,
       decoration: InputDecoration(

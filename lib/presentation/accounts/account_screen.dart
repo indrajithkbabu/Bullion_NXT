@@ -12,10 +12,13 @@ class AccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AccountBloc, AccountState>(
       builder: (accountContext, accountState) {
-        return  true? const MarketGoldRateConfig(): accountState.isLogin ?? false
+        return  accountState.hasToken? const MarketGoldRateConfig(): accountState.isLogin ?? false
             ? const Loginscreen()
             : const SignUpScreen();
       },
     );
   }
 }
+
+
+
